@@ -1,3 +1,4 @@
+require("dotenv").config();
 const port = process.env.PORT || 3000;
 const express = require("express");
 const rotas = require("./rotas");
@@ -11,4 +12,4 @@ app.use(rotas);
 
 app.listen(port, () => {
   console.log(`Servidor iniciado na porta ${port}`);
-}); 
+});

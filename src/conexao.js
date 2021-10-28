@@ -3,7 +3,7 @@ const knex = require("knex")({
   connection: {
     connectionString:
       process.env.DATABASE_URL ||
-      "postgresql://postgres:postgres@localhost:5432/mini_insta",
+      `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:5432/${process.env.DB_DATABASE}`,
     ssl: process.env.DATABASE_URL
       ? {
           rejectUnauthorized: false,
